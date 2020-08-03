@@ -1,22 +1,51 @@
+import React from "react";
+import "./App.scss";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import React from 'react';
 function App() {
   return (
-      
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={require('./profile.jpg')} alt="Display" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-purple-500 text-xl mb-2">
-          Blessing Krofegha
+    <Router>
+      <div className='App'>
+        <Header />
+        <div className='container'>
+          <div className='wrapper'>
+            <div className='home'>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/opportunities' component={Opportunities} />
+                <Route exact path='/solutions' component={Solutions} />
+                <Route exact path='/contact-us' component={Contact} />
+              </Switch>
+            </div>
+          </div>
         </div>
-        <p className="text-gray-700 text-base">
-          When i'm not coding i switch to netflix with biscuits and cold tea as my companion. <span></span>😜
-        </p>
-      </div> 
-      <div className="px-6 py-4">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Software Engineer</span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Writter</span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mt-2 ml-20">#Public Speaker</span>
+      </div>
+    </Router>
+  );
+}
+
+function Opportunities() {
+  return <p>Discover our numerous opportunities</p>;
+}
+
+function Solutions() {
+  return <p>Solutions that help you.</p>;
+}
+
+function Contact() {
+  return <p>Feel free to reach us.</p>;
+}
+
+function Home() {
+  return (
+    <div className='container'>
+      <div className='wrapper'>
+        <h5>
+          The <b>HAMBRG</b>, is a creative, engineer driven, global agency
+          working on advancing the software, advertising and design communities
+          to new heights.
+        </h5>
       </div>
     </div>
   );
