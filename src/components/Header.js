@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
-import Hamburger from "./Hamburger";
+
 
 const Header = ({ history }) => {
   // State of our Menu
@@ -66,7 +66,7 @@ const Header = ({ history }) => {
           </div>
         </div>
       </div>
-      <Hamburger state={state} />
+      
     </header>
   );
 };
