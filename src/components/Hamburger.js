@@ -83,8 +83,8 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
-                      to='/opportunities'>
-                      Opportunities
+                      to='/about'>
+                      About
                     </Link>
                   </li>
                   <li>
@@ -92,8 +92,8 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/solutions'>
-                      Solutions
+                      to='/services'>
+                      Services
                     </Link>
                   </li>
                   <li>
@@ -108,16 +108,14 @@ const Hamburger = ({ state }) => {
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>
-                <h3>Our Promise</h3>
+                <h3>Our Goal</h3>
                 <p>
-                  The passage experienced a surge in popularity during the 1960s
-                  when Letraset used it on their dry-transfer sheets, and again
-                  during the 90s as desktop publishers bundled the text with
-                  their software.
+                  Our goal is to ensure that we able to constantly service your basic needs with ease,
+                  to the point where you don't have to move an inch from your home.
                 </p>
               </div>
               <div className='locations'>
-                Locations:
+                We are in:
                 {/* Returning the list of cities */}
                 {cities.map(el => (
                   <span

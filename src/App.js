@@ -13,8 +13,8 @@ function App() {
             <div className='home'>
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/opportunities' component={Opportunities} />
-                <Route exact path='/solutions' component={Solutions} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/services' component={Services} />
                 <Route exact path='/contact-us' component={Contact} />
               </Switch>
             </div>
@@ -25,12 +25,12 @@ function App() {
   );
 }
 
-function Opportunities() {
-  return <p>Discover our numerous opportunities</p>;
+function About() {
+  return <p>We have a decade years experience of worldclass services</p>;
 }
 
-function Solutions() {
-  return <p>Solutions that help you.</p>;
+function Services() {
+  return <p>We can take care of your home, office and your day to day needs.</p>;
 }
 
 function Contact() {
@@ -42,9 +42,8 @@ function Home() {
     <div className='container'>
       <div className='wrapper'>
         <h5>
-          The <b>HAMBRG</b>, is a creative, engineer driven, global agency
-          working on advancing the software, advertising and design communities
-          to new heights.
+          The <b>SHOPPER</b>, is a worldclass, innovative, global online ecommerce platform,
+          that meets your everyday daily needs.
         </h5>
       </div>
     </div>

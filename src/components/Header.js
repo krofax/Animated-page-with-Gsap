@@ -13,42 +13,42 @@ const Header = ({ history }) => {
   const [disabled, setDisabled] = useState(false);
 
   //Use Effect
-  useEffect(() => {
-    //Listening for page changes.
-    history.listen(() => {
-      setState({ clicked: false, menuName: "Menu" });
-    });
-  }, [history]);
+  // useEffect(() => {
+  //   //Listening for page changes.
+  //   history.listen(() => {
+  //     setState({ clicked: false, menuName: "Menu" });
+  //   });
+  // }, [history]);
 
   // Toggle menu
-  const handleMenu = () => {
-    disableMenu();
-    if (state.initial === false) {
-      setState({
-        initial: null,
-        clicked: true,
-        menuName: "Close"
-      });
-    } else if (state.clicked === true) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Menu"
-      });
-    } else if (state.clicked === false) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Close"
-      });
-    }
-  };
+  // const handleMenu = () => {
+  //   disableMenu();
+  //   if (state.initial === false) {
+  //     setState({
+  //       initial: null,
+  //       clicked: true,
+  //       menuName: "Close"
+  //     });
+  //   } else if (state.clicked === true) {
+  //     setState({
+  //       clicked: !state.clicked,
+  //       menuName: "Menu"
+  //     });
+  //   } else if (state.clicked === false) {
+  //     setState({
+  //       clicked: !state.clicked,
+  //       menuName: "Close"
+  //     });
+  //   }
+  // };
 
   //Determine if out menu button should be disabled
-  const disableMenu = () => {
-    setDisabled(!disabled);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1200);
-  };
+  // const disableMenu = () => {
+  //   setDisabled(!disabled);
+  //   setTimeout(() => {
+  //     setDisabled(false);
+  //   }, 1200);
+  // };
 
   return (
     <header>
@@ -56,10 +56,10 @@ const Header = ({ history }) => {
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link to="/">HAMBRG.</Link>
+              <Link to="/">SHOPPER.</Link>
             </div>
             <div className="menu">
-              <button disabled={disabled} onClick={handleMenu}>
+              <button>
                 {state.menuName}
               </button>
             </div>
