@@ -1,11 +1,9 @@
-import React, {useEffect, useRef} from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, {useEffect, useRef} from "react"
 import "./App.scss";
-import Header from "./components/Header";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { textIntro } from "./components/Animate"
 
-gsap.registerPlugin(ScrollTrigger);
 const App = () => {
 
   return (
@@ -48,54 +46,15 @@ function Home() {
   let wrapper = useRef(null)
 
   useEffect(() => {
-    const textIntro = gsap.timeline();
-    textIntro
-      .from('.intro', {
-        xPercent: -20,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 2
-      })
+    textIntro(intro)
   }, [])
   return (
-    <div className='container'>
-      <div className='wrapper' ref={wrapper}>
-        <div className="hero__img"
-        ref={scroll}
-        >
-          {/* <div class="gallery">
-            <a target="_blank" href="/">
-              <img src={require("./images/img_5terre.jpg")} alt="Cinque Terre" width="600" height="400"/>
-            </a>
-          </div>
-
-            <div class="gallery">
-              <a target="_blank" href="/">
-              <img src={require("./images/img_forest.jpg")} alt="Forest" width="600" height="400"/>
-              </a>
-            </div>
-
-              <div class="gallery">
-                <a target="_blank" href="/">
-              <img src={require("./images/img_lights.jpg")} alt="Northern Lights" width="600" height="400"/>
-                </a>
-              </div>
-
-                <div class="gallery">
-                  <a target="_blank" href="/">
-              <img src={require("./images/img_mountains.jpg")} alt="Mountains" width="600" height="400"/>
-                  </a>
-                </div> */}
-          {/* <img className="hero__img--1" src={require("./images/cream.webp")} alt="cream"/>
-          <img className="hero__img--2" src={require("./images/drugs.webp")} alt="drugs"/>
-          <img className="hero__img--3" src={require("./images/pringles.webp")} alt="pringles"/>
-          <img className="hero__img--4" src={require("./images/provisions.webp")} alt="provisions"/> */}
-				</div>
-        <h5 className="intro"
-          ref={intro}
-        >
-          <b>SHOPPER</b>, is a worldclass, innovative, global online ecommerce platform,
-          that meets your everyday daily needs.
+    <div className="container">
+      <div className="wrapper" ref={wrapper}>
+        <div className="hero__img" ref={scroll}></div>
+        <h5 className="intro" ref={(el) => (intro = el)}>
+          <b>SHOPPER</b>, is a worldclass, innovative, global online ecommerce
+          platform, that meets your everyday daily needs.
         </h5>
       </div>
     </div>

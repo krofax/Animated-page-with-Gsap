@@ -10,7 +10,7 @@ import {
   hoverLink,
   hoverExit,
   cityImage,
-  removeCityImage
+  removeCityImage,
 } from './Animate'
 
 import forest from '../images/forest.jpg'
@@ -35,6 +35,7 @@ const Menu = ({ state }) => {
   let info = useRef(null)
   let line1 = useRef(null)
   let line2 = useRef(null)
+  let line3 = useRef(null)
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -111,18 +112,17 @@ const Menu = ({ state }) => {
                 </ul>
               </nav>
               <div ref={(el) => (info = el)} className="info">
-                <h3>Our Promise</h3>
+                <h3>Our Vision</h3>
                 <p>
-                  The passage experienced a surge in popularity during the 1960s
-                  when Letraset used it on their dry-transfer sheets, and again
-                  during the 90s as desktop publishers bundled the text with
-                  their software.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsam nesciunt dolores, 
+                  similique minus perspiciatis non repudiandae 
+                  dolore nulla eos dicta, libero molestias eaque omnis excepturi! Est corporis earum fuga.
                 </p>
               </div>
               <div className="locations">
                 Locations:
                 {/* Returning the list of cities */}
-                {cities.map((el) => (
+                {location.map((el) => (
                   <span
                     key={el.name}
                     onMouseEnter={() => cityImage(el.image, imageBackground)}

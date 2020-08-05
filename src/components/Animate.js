@@ -1,5 +1,17 @@
 import gsap from "gsap"
 
+//Text Intro
+export const textIntro = elem => {
+  gsap.from(elem, {
+    xPercent: -20,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 2,
+    scale: -1,
+    ease: "back",
+  });
+};
+
 //Open menu
 export const staggerShow = (elem1, elem2) => {
   gsap.from([elem1, elem2], {
