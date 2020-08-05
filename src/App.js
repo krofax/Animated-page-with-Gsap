@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react"
 import "./App.scss";
 import Header from "./components/Header"
+import {Image} from "./components/Image"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { textIntro, skewGallery } from "./components/Animate"
 
@@ -38,38 +39,11 @@ function Gallery() {
   let skewImage = useRef(null);
   useEffect(() => {
     skewGallery(skewImage)
-    // //make gallery skew
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
-    // let clamp = gsap.utils.clamp(-20, 20)
-    // ScrollTrigger.create({
-    //   trigger: ".skewElem",
-    //   onUpdate: (self) => {
-    //     const velocity = clamp(Math.round(self.getVelocity() / 300));
-
-    //     gsap.to(".skewElem", {
-    //       skew: 0,
-    //       skewY: velocity,
-    //       ease: "power3",
-    //       duration: 0.8,
-    //       overwrite: true,
-    //     });
-    //   },
-    // });
 
   }, []);
   return (
     <div ref={(el) => (skewImage = el)}>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=1" alt="random1" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=2" alt="random2" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=3" alt="random3" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=4" alt="random4" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=5" alt="random5" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=6" alt="random6" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=7" alt="random7" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=8" alt="random8" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=9" alt="random9" className="skewElem"/>
-      <img width="600" height="600" src="https://picsum.photos/600/600?random=10" alt="random0" className="skewElem"/>
+      <Image/>
 
     </div>
   )

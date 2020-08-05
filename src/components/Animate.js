@@ -116,27 +116,23 @@ export const removeCityImage = target => {
 
 //Skew gallery Images
 export const skewGallery = elem1 => {
-                                      //make gallery skew
-                                      gsap.registerPlugin(ScrollTrigger);
-                                      gsap.set(elem1, {
-                                        transformOrigin: "right center",
-                                        force3D: true,
-                                      });
-                                      let clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
-                                      ScrollTrigger.create({
-                                        trigger: elem1,
-                                        onUpdate: (self) => {
-                                          const velocity = clamp(
-                                            Math.round(self.getVelocity() / 300)
-                                          );
+  //register ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+  // make the right edge "stick" to the scroll bar. force3D: true improves performance
+    gsap.set(elem1, { transformOrigin: "right center", force3D: true });
+    let clamp = gsap.utils.clamp(-20, 20) // don't let the skew go beyond 20 degrees. 
+    ScrollTrigger.create({
+      trigger: elem1,
+      onUpdate: (self) => {
+        const velocity = clamp(Math.round(self.getVelocity() / 300));
+        gsap.to(elem1, {
+          skew: 0,
+          skewY: velocity,
+          ease: "power3",
+          duration: 0.8,
+          overwrite: true,
+        });
+      },
+    });
 
-                                          gsap.to(elem1, {
-                                            skew: 0,
-                                            skewY: velocity,
-                                            ease: "power3",
-                                            duration: 0.8,
-                                            overwrite: true,
-                                          });
-                                        },
-                                      });
-                                    }
+}
