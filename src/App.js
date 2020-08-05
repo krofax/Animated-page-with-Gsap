@@ -42,16 +42,14 @@ function Contact() {
 function Home() {
   //Create a variable for our dom nodes
   let intro = useRef(null)
-  let scroll = useRef(null)
-  let wrapper = useRef(null)
 
   useEffect(() => {
     textIntro(intro)
   }, [])
   return (
     <div className="container">
-      <div className="wrapper" ref={wrapper}>
-        <div className="hero__img" ref={scroll}></div>
+      <div className="wrapper">
+        <div className="hero__img"></div>
         <h5 className="intro" ref={(el) => (intro = el)}>
           <b>SHOPPER</b>, is a worldclass, innovative, global online ecommerce
           platform, that meets your everyday daily needs.
