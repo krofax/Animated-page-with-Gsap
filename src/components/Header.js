@@ -12,43 +12,43 @@ const Header = ({ history }) => {
   // State of our button
   const [disabled, setDisabled] = useState(false);
 
-  //Use Effect
-  // useEffect(() => {
-  //   //Listening for page changes.
-  //   history.listen(() => {
-  //     setState({ clicked: false, menuName: "Menu" });
-  //   });
-  // }, [history]);
+  //When the component mounts
+  useEffect(() => {
+    //Listening for page changes.
+    history.listen(() => {
+      setState({ clicked: false, menuName: "Menu" });
+    });
+  }, [history]);
 
-  // Toggle menu
-  // const handleMenu = () => {
-  //   disableMenu();
-  //   if (state.initial === false) {
-  //     setState({
-  //       initial: null,
-  //       clicked: true,
-  //       menuName: "Close"
-  //     });
-  //   } else if (state.clicked === true) {
-  //     setState({
-  //       clicked: !state.clicked,
-  //       menuName: "Menu"
-  //     });
-  //   } else if (state.clicked === false) {
-  //     setState({
-  //       clicked: !state.clicked,
-  //       menuName: "Close"
-  //     });
-  //   }
-  // };
+  //toggle menu
+  const handleMenu = () => {
+    disableMenu();
+    if (state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true,
+        menuName: "Close"
+      });
+    } else if (state.clicked === true) {
+      setState({
+        clicked: !state.clicked,
+        menuName: "Menu"
+      });
+    } else if (state.clicked === false) {
+      setState({
+        clicked: !state.clicked,
+        menuName: "Close"
+      });
+    }
+  };
 
-  //Determine if out menu button should be disabled
-  // const disableMenu = () => {
-  //   setDisabled(!disabled);
-  //   setTimeout(() => {
-  //     setDisabled(false);
-  //   }, 1200);
-  // };
+  // check if out button is disabled
+  const disableMenu = () => {
+    setDisabled(!disabled);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 1200);
+  };
 
   return (
     <header>
