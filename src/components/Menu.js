@@ -84,9 +84,9 @@ const Menu = ({ state }) => {
                       onMouseEnter={(e) => hoverLink(e)}
                       onMouseOut={(e) => hoverExit(e)}
                       ref={(el) => (line1 = el)}
-                      to="/opportunities"
+                      to="/about-us"
                     >
-                      Opportunities
+                      About
                     </Link>
                   </li>
                   <li>
@@ -94,9 +94,9 @@ const Menu = ({ state }) => {
                       onMouseEnter={(e) => hoverLink(e)}
                       onMouseOut={(e) => hoverExit(e)}
                       ref={(el) => (line2 = el)}
-                      to="/solutions"
+                      to="/gallery"
                     >
-                      Solutions
+                      Gallery
                     </Link>
                   </li>
                   <li>
@@ -109,6 +109,7 @@ const Menu = ({ state }) => {
                       Contact us
                     </Link>
                   </li>
+                  
                 </ul>
               </nav>
               <div ref={(el) => (info = el)} className="info">
