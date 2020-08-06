@@ -84,35 +84,35 @@ export const hoverExit = e => {
 };
 
 // adds image once you hover on
-export const cityImage = (city, target) => {
-  gsap.to(target, {
-    duration: 0,
-    background: `url(${city}) center center`
-  });
-  gsap.to(target, {
-    duration: 0.4,
-    opacity: 1,
-    ease: "power4.inOut"
-  });
-  gsap.from(target, {
-    duration: 0.5,
-    skewY: 2,
-    transformOrigin: "right top"
-  });
-};
+// export const cityImage = (city, target) => {
+//   gsap.to(target, {
+//     duration: 0,
+//     background: `url(${city}) center center`
+//   });
+//   gsap.to(target, {
+//     duration: 0.4,
+//     opacity: 1,
+//     ease: "power4.inOut"
+//   });
+//   gsap.from(target, {
+//     duration: 0.5,
+//     skewY: 2,
+//     transformOrigin: "right top"
+//   });
+// };
 
-// Removes the city image once you hover off
-export const removeCityImage = target => {
-  gsap.to(target, {
-    duration: 0,
-    skewY: 0
-  });
-  gsap.to(target, {
-    duration: 0.5,
-    opacity: 0,
-    skewY: 0
-  });
-};
+// // Removes the city image once you hover off
+// export const removeCityImage = target => {
+//   gsap.to(target, {
+//     duration: 0,
+//     skewY: 0
+//   });
+//   gsap.to(target, {
+//     duration: 0.5,
+//     opacity: 0,
+//     skewY: 0
+//   });
+// };
 
 //Skew gallery Images
 export const skewGallery = elem1 => {

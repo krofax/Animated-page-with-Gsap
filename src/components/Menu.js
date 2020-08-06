@@ -9,8 +9,8 @@ import {
   fadeIn,
   hoverLink,
   hoverExit,
-  cityImage,
-  removeCityImage,
+  // cityImage,
+  // removeCityImage,
 } from './Animate'
 
 import forest from '../images/forest.jpg'
@@ -123,7 +123,7 @@ const Menu = ({ state }) => {
               <div className="locations">
                 Locations:
                 {/* Returning the list of cities */}
-                {location.map((el) => (
+                {/* {location.map((el) => (
                   <span
                     key={el.name}
                     onMouseEnter={() => cityImage(el.image, imageBackground)}
@@ -131,7 +131,7 @@ const Menu = ({ state }) => {
                   >
                     {el.name}
                   </span>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
