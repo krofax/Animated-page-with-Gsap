@@ -41,7 +41,7 @@ function Home() {
   return (
     <div className='container'>
       <div className='wrapper'>
-        <h5>
+        <h5 className="intro">
           The <b>SHOPPER</b>, is a worldclass, innovative, global online ecommerce platform,
           that meets your everyday daily needs.
         </h5>
