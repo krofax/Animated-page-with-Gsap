@@ -6,70 +6,70 @@ export const Image = () => {
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=1"
+        src={require('../images/image1.jpg')}
         alt="random1"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=2"
+        src={require('../images/image2.jpg')}
         alt="random2"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=3"
+        src={require('../images/image3.jpg')}
         alt="random3"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=4"
+        src={require('../images/image4.jpg')}
         alt="random4"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=5"
+        src={require('../images/image5.jpg')}
         alt="random5"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=6"
+        src={require('../images/image6.jpg')}
         alt="random6"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=7"
+        src={require('../images/image7.jpg')}
         alt="random7"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=8"
+        src={require('../images/image8.jpg')}
         alt="random8"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=9"
+        src={require('../images/image9.jpg')}
         alt="random9"
         className="skewElem"
       />
       <img
         width="600"
         height="600"
-        src="https://picsum.photos/600/600?random=10"
+        src={require('../images/image1.jpg')}
         alt="random0"
         className="skewElem"
       />

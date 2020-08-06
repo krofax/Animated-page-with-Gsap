@@ -8,30 +8,15 @@ import {
   staggerLinks,
   fadeIn,
   hoverLink,
-  hoverExit,
-  // cityImage,
-  // removeCityImage,
+  hoverExit
 } from './Animate'
 
-import forest from '../images/forest.jpg'
-import lights from '../images/lights.jpg'
-import mountains from '../images/mountains.jpg'
-import terre from '../images/terre.jpg'
-
-const location = [
-  { name: "forest", image: forest },
-  { name: "lights", image: lights },
-  { name: "mountains", image: mountains },
-  { name: "terre", image: terre },
-  
-]
 const Menu = ({ state }) => {
    //create refs for our DOM elements
   
   let menuWrapper = useRef(null)
   let show1 = useRef(null)
   let show2 = useRef(null)
-  let imageBackground = useRef(null)
   let info = useRef(null)
   let line1 = useRef(null)
   let line2 = useRef(null)
@@ -70,10 +55,6 @@ const Menu = ({ state }) => {
         className="menu-secondary-background-color"
       ></div>
       <div ref={(el) => (show2 = el)} className="menu-layer">
-        <div
-          ref={(el) => (imageBackground = el)}
-          className="menu-city-background"
-        ></div>
         <div className="container">
           <div className="wrapper">
             <div className="menu-links">
@@ -119,19 +100,6 @@ const Menu = ({ state }) => {
                   similique minus perspiciatis non repudiandae 
                   dolore nulla eos dicta, libero molestias eaque omnis excepturi! Est corporis earum fuga.
                 </p>
-              </div>
-              <div className="locations">
-                Locations:
-                {/* Returning the list of cities */}
-                {/* {location.map((el) => (
-                  <span
-                    key={el.name}
-                    onMouseEnter={() => cityImage(el.image, imageBackground)}
-                    onMouseOut={() => removeCityImage(imageBackground)}
-                  >
-                    {el.name}
-                  </span>
-                ))} */}
               </div>
             </div>
           </div>
