@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter, Link, useHistory } from "react-router-dom";
 import Menu from "./Menu";
 import { textIntro } from "./Animate";
 
-const Header = ({ history }) => {
+const Header = () => {
+  const history = useHistory()
   let logo = useRef(null);
   // State of our Menu
   const [state, setState] = useState({
@@ -24,7 +25,7 @@ const Header = ({ history }) => {
   }, [history]);
 
   //toggle menu
-  const handleMenu = () => {
+  const toggleMenu = () => {
     disableMenu();
     if (state.initial === false) {
       setState({
@@ -50,7 +51,7 @@ const Header = ({ history }) => {
     setDisabled(!disabled);
     setTimeout(() => {
       setDisabled(false);
-    }, 1200);
+    }, 1000);
   };
 
   return (
@@ -62,7 +63,7 @@ const Header = ({ history }) => {
               <Link to="/">SHOPPER.</Link>
             </div>
             <div className="menu">
-              <button disabled={disabled} onClick={handleMenu}>
+              <button disabled={disabled} onClick={toggleMenu}>
                 {state.menuName}
               </button>
             </div>
