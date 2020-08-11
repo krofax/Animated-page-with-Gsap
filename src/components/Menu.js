@@ -3,8 +3,8 @@ import { gsap } from "gsap"
 import { Link } from "react-router-dom"
 
 import {
-  staggerShow,
-  staggerHide,
+  menuShow,
+  menuHide,
   staggerLinks,
   fadeIn,
   hoverLink,
@@ -27,7 +27,7 @@ const Menu = ({ state }) => {
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
 
-      staggerHide(show2, show1);
+      menuHide(show2, show1);
       // Set menu to display none
       gsap.to(menuWrapper, { duration: 1, css: { display: "none" } });
     } else if (
@@ -42,7 +42,7 @@ const Menu = ({ state }) => {
         opacity: 1,
         height: "100%"
       });
-      staggerShow(show1, show2);
+      menuShow(show1, show2);
       fadeIn(info);
       staggerLinks(line1, line2, line3);
     }

@@ -14,7 +14,7 @@ export const textIntro = elem => {
 };
 
 //Open menu
-export const staggerShow = (elem1, elem2) => {
+export const menuShow = (elem1, elem2) => {
   gsap.from([elem1, elem2], {
     duration: 0.7,
     height: 0,
@@ -28,7 +28,7 @@ export const staggerShow = (elem1, elem2) => {
 }
 
 //Close menu
-export const staggerHide = (elem1, elem2) => {   
+export const menuHide = (elem1, elem2) => {   
   gsap.to([elem1, elem2], {
     duration: 0.8,
     height: 0,
