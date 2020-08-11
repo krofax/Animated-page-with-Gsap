@@ -47,21 +47,10 @@ export const staggerLinks = (elem1, elem2, elem3) => {
     delay: 0.1,
     ease: "power4.inOut",
     stagger: {
-      amount: 0.3,
+      amount: 0.4,
     },
   })
 }
-
-// Fade up menu info
-export const fadeIn = elem => {
-  gsap.from(elem, {
-    y: 60,
-    duration: 1,
-    delay: 0.2,
-    opacity: 0,
-    ease: "power4.inOut"
-  })
-};
 
 // Hover on the link
 export const hoverLink = e => {
