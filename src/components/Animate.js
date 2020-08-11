@@ -47,7 +47,7 @@ export const staggerLinks = (elem1, elem2, elem3) => {
     delay: 0.1,
     ease: "power4.inOut",
     stagger: {
-      amount: 0.4,
+      amount: 0.3,
     },
   })
 }

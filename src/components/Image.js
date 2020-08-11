@@ -3,6 +3,7 @@ import React from 'react'
 export const Image = () => {
   return (
     <div>
+      <h4>Gallery</h4>
       <img
         width="600"
         height="600"

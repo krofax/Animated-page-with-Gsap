@@ -5,10 +5,10 @@ import { Link } from "react-router-dom"
 import {
   menuShow,
   menuHide,
-  // staggerLinks,
+  staggerLinks,
   textIntro,
-  // hoverLink,
-  // hoverExit
+  hoverLink,
+  hoverExit
 } from './Animate'
 
 const Menu = ({ state }) => {
@@ -44,7 +44,7 @@ const Menu = ({ state }) => {
       });
       menuShow(show1, show2);
       textIntro(info);
-      // staggerLinks(line1, line2, line3);
+      staggerLinks(line1, line2, line3);
     }
   }, [state])
   
@@ -62,8 +62,8 @@ const Menu = ({ state }) => {
                 <ul>
                   <li>
                     <Link
-                      // onMouseEnter={(e) => hoverLink(e)}
-                      // onMouseOut={(e) => hoverExit(e)}
+                      onMouseEnter={(e) => hoverLink(e)}
+                      onMouseOut={(e) => hoverExit(e)}
                       ref={(el) => (line1 = el)}
                       to="/about-us"
                     >
@@ -72,8 +72,8 @@ const Menu = ({ state }) => {
                   </li>
                   <li>
                     <Link
-                      // onMouseEnter={(e) => hoverLink(e)}
-                      // onMouseOut={(e) => hoverExit(e)}
+                      onMouseEnter={(e) => hoverLink(e)}
+                      onMouseOut={(e) => hoverExit(e)}
                       ref={(el) => (line2 = el)}
                       to="/gallery"
                     >
@@ -82,8 +82,8 @@ const Menu = ({ state }) => {
                   </li>
                   <li>
                     <Link
-                      // onMouseEnter={(e) => hoverLink(e)}
-                      // onMouseOut={(e) => hoverLink(e)}
+                      onMouseEnter={(e) => hoverLink(e)}
+                      onMouseOut={(e) => hoverLink(e)}
                       ref={(el) => (line3 = el)}
                       to="/contact-us"
                     >
