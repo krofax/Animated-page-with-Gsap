@@ -87,7 +87,7 @@ export const skewGallery = elem1 => {
           skewY: velocity,
           ease: "power3",
           duration: 0.8,
-          overwrite: true,
+          // overwrite: true,
         });
       },
     });
