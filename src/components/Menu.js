@@ -6,9 +6,9 @@ import {
   staggerShow,
   staggerHide,
   staggerLinks,
-  fadeIn,
   hoverLink,
   hoverExit,
+  textIntro
 } from "./Animate";
 
 const Menu = ({ state }) => {
@@ -43,7 +43,7 @@ const Menu = ({ state }) => {
         height: "100%",
       });
       staggerShow(show1, show2);
-      fadeIn(info);
+      textIntro(info);
       staggerLinks(line1, line2, line3);
     }
   }, [state]);
